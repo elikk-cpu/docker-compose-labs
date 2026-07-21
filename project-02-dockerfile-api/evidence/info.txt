@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Tue, 21 Jul 2026 16:33:44 GMT
+Connection: close
+Content-Type: application/json
+Content-Length: 78
+
+{"host":"0.0.0.0","port":"5000","service":"dockerfile-api","version":"0.1.0"}
