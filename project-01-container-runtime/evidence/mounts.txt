@@ -1,0 +1,1 @@
+[{"Type":"bind","Source":"/home/aa/docker-compose-labs/project-01-container-runtime/site","Destination":"/usr/share/nginx/html","Mode":"","RW":false,"Propagation":"rprivate"},{"Type":"bind","Source":"/home/aa/docker-compose-labs/project-01-container-runtime/nginx/default.conf","Destination":"/etc/nginx/conf.d/default.conf","Mode":"","RW":false,"Propagation":"rprivate"}]

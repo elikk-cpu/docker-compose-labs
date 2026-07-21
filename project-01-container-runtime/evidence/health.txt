@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx/1.30.4
+Date: Tue, 21 Jul 2026 14:48:10 GMT
+Content-Type: text/plain
+Content-Length: 3
+Last-Modified: Tue, 21 Jul 2026 13:18:18 GMT
+Connection: keep-alive
+ETag: "6a5f719a-3"
+Accept-Ranges: bytes
+
+ok
