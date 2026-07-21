@@ -10,5 +10,4 @@
     .DS_Store
     evidence/*.tmp
     Dockerfile
-.dockerignore
 secrets/*.txt

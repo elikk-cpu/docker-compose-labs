@@ -1,0 +1,143 @@
+
+
+## Overview
+
+                   │                  Analyzed Image                  
+───────────────────┼──────────────────────────────────────────────────
+ Target            │  local://secure-go-api:0.1.0                     
+   digest          │  995ee930157d                                    
+   platform        │ linux/amd64                                      
+   provenance      │ git@github.com:elikk-cpu/docker-compose-labs.git 
+                   │  https://github.com/elikk-cpu/docker-compose-labs/blob/6e5e8a27a5b932772d0bd0d795dc483bad0aee46        
+   vulnerabilities │    0C    10H     9M     1L     2?                
+   size            │ 2.4 MB                                           
+   packages        │ 2                                                
+                   │                                                  
+ Base image        │  golang:1.24.13-alpine3.23                       
+                   │  757779acac4a                                    
+
+
+## Packages and Vulnerabilities
+
+   0C    10H     9M     1L     2?  stdlib 1.24.13
+pkg:golang/stdlib@1.24.13
+
+    ✗ HIGH CVE-2026-42504
+      https://scout.docker.com/v/CVE-2026-42504?s=golang&n=stdlib&t=golang&vr=%3C1.25.11
+      Affected range : <1.25.11 
+      Fixed version  : 1.25.11  
+    
+    ✗ HIGH CVE-2026-42499
+      https://scout.docker.com/v/CVE-2026-42499?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-39836
+      https://scout.docker.com/v/CVE-2026-39836?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-39820
+      https://scout.docker.com/v/CVE-2026-39820?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-33814
+      https://scout.docker.com/v/CVE-2026-33814?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-33811
+      https://scout.docker.com/v/CVE-2026-33811?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-32283
+      https://scout.docker.com/v/CVE-2026-32283?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ HIGH CVE-2026-32281
+      https://scout.docker.com/v/CVE-2026-32281?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ HIGH CVE-2026-32280
+      https://scout.docker.com/v/CVE-2026-32280?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ HIGH CVE-2026-25679
+      https://scout.docker.com/v/CVE-2026-25679?s=golang&n=stdlib&t=golang&vr=%3C1.25.8
+      Affected range : <1.25.8 
+      Fixed version  : 1.25.8  
+    
+    ✗ MEDIUM CVE-2026-27145
+      https://scout.docker.com/v/CVE-2026-27145?s=golang&n=stdlib&t=golang&vr=%3C1.25.11
+      Affected range : <1.25.11 
+      Fixed version  : 1.25.11  
+    
+    ✗ MEDIUM CVE-2026-32282
+      https://scout.docker.com/v/CVE-2026-32282?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ MEDIUM CVE-2026-39826
+      https://scout.docker.com/v/CVE-2026-39826?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ MEDIUM CVE-2026-39823
+      https://scout.docker.com/v/CVE-2026-39823?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ MEDIUM CVE-2026-32289
+      https://scout.docker.com/v/CVE-2026-32289?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ MEDIUM CVE-2026-27142
+      https://scout.docker.com/v/CVE-2026-27142?s=golang&n=stdlib&t=golang&vr=%3C1.25.8
+      Affected range : <1.25.8 
+      Fixed version  : 1.25.8  
+    
+    ✗ MEDIUM CVE-2026-32288
+      https://scout.docker.com/v/CVE-2026-32288?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ MEDIUM CVE-2026-42507
+      https://scout.docker.com/v/CVE-2026-42507?s=golang&n=stdlib&t=golang&vr=%3C1.25.11
+      Affected range : <1.25.11 
+      Fixed version  : 1.25.11  
+    
+    ✗ MEDIUM CVE-2026-39825
+      https://scout.docker.com/v/CVE-2026-39825?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ LOW CVE-2026-27139
+      https://scout.docker.com/v/CVE-2026-27139?s=golang&n=stdlib&t=golang&vr=%3C1.25.8
+      Affected range : <1.25.8 
+      Fixed version  : 1.25.8  
+    
+    ✗ UNSPECIFIED CVE-2026-42505
+      https://scout.docker.com/v/CVE-2026-42505?s=golang&n=stdlib&t=golang&vr=%3C1.25.12
+      Affected range : <1.25.12 
+      Fixed version  : 1.25.12  
+    
+    ✗ UNSPECIFIED CVE-2026-39822
+      https://scout.docker.com/v/CVE-2026-39822?s=golang&n=stdlib&t=golang&vr=%3C1.25.12
+      Affected range : <1.25.12 
+      Fixed version  : 1.25.12  
+    
+
+
+22 vulnerabilities found in 1 package
+  CRITICAL     0  
+  HIGH         10 
+  MEDIUM       9  
+  LOW          1  
+  UNSPECIFIED  2  
+

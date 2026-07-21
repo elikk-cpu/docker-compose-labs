@@ -1,0 +1,23 @@
+
+
+## Overview
+
+                   │                  Analyzed Image                  
+───────────────────┼──────────────────────────────────────────────────
+ Target            │  local://secure-go-api:0.1.1                     
+   digest          │  808ee59feb3f                                    
+   platform        │ linux/amd64                                      
+   provenance      │ git@github.com:elikk-cpu/docker-compose-labs.git 
+                   │  https://github.com/elikk-cpu/docker-compose-labs/blob/6e5e8a27a5b932772d0bd0d795dc483bad0aee46        
+   vulnerabilities │    0C     0H     0M     0L                       
+   size            │ 2.5 MB                                           
+   packages        │ 2                                                
+                   │                                                  
+ Base image        │  golang:1.25.12-alpine3.23                       
+                   │  f128118f1f3a                                    
+
+
+## Packages and Vulnerabilities
+
+  No vulnerable packages detected
+
