@@ -1,0 +1,7 @@
+IMAGE          CREATED         CREATED BY                            SIZE      COMMENT
+808ee59feb3f   2 minutes ago   ENTRYPOINT ["/server"]                0B        buildkit.dockerfile.v0
+<missing>      2 minutes ago   EXPOSE [8080/tcp]                     0B        buildkit.dockerfile.v0
+<missing>      2 minutes ago   USER 10001:10001                      0B        buildkit.dockerfile.v0
+<missing>      2 minutes ago   COPY /out/server /server # buildkit   5.76MB    buildkit.dockerfile.v0
+<missing>      2 minutes ago   ENV APP_VERSION=0.1.1 APP_PORT=8080   0B        buildkit.dockerfile.v0
+<missing>      2 minutes ago   ARG APP_VERSION=0.1.1                 0B        buildkit.dockerfile.v0

@@ -6,7 +6,7 @@
 |---|---|
 | Nginx | `nginx:1.30.4-alpine3.24` |
 | Python runtime | `python:3.13.14-slim-bookworm` |
-| Go builder | `golang:1.24.13-alpine3.23` |
+| Go builder | `golang:1.25.12-alpine3.23` |
 | Minimal runtime | `alpine:3.22.2` |
 | PostgreSQL | `postgres:17.10-alpine3.23` |
 | Redis | `redis:8.6.4-alpine3.23` |

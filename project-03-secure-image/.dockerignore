@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+.env.local
+secrets/
+notes/
+evidence/
+RESULT.md
+RESULT_TEMPLATE.md
+README.md
+acceptance.md
+questions.md
+Dockerfile.insecure
+Dockerfile.todo
+*.log
