@@ -1,0 +1,18 @@
+    .env
+    .env.local
+    .venv/
+    __pycache__/
+    *.py[cod]
+    *.log
+    .pytest_cache/
+    .idea/
+    .vscode/
+    .DS_Store
+    evidence/*.tmp
+    compose.yaml
+compose.override.yaml
+compose.prod.yaml
+frontend/Dockerfile
+backend/Dockerfile
+worker/Dockerfile
+secrets/*.txt

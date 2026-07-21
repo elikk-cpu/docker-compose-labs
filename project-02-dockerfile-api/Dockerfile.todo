@@ -1,0 +1,7 @@
+# Создай рядом файл Dockerfile.
+# Требования:
+# - versioned Python base image из VERSIONS.md;
+# - dependency cache должен переживать изменение app/app.py;
+# - используй WORKDIR, COPY, RUN, ARG/ENV, EXPOSE;
+# - CMD или ENTRYPOINT — в exec-форме;
+# - приложение должно слушать 0.0.0.0.

@@ -1,0 +1,4 @@
+environment_name: training
+features:
+  job_queue: true
+  monitoring: true

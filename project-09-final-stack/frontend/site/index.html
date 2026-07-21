@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Final Docker Lab</title>
+</head>
+<body>
+  <h1>Final Docker Lab</h1>
+  <button id="info">API info</button>
+  <button id="job">Create job</button>
+  <button id="jobs">List jobs</button>
+  <pre id="out"></pre>
+  <script>
+    const out = document.getElementById("out");
+    async function show(response) {
+      out.textContent = JSON.stringify(await response.json(), null, 2);
+    }
+    document.getElementById("info").onclick =
+      () => fetch("/api/info").then(show);
+    document.getElementById("job").onclick =
+      () => fetch("/api/jobs", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({task: "from-frontend"})
+      }).then(show);
+    document.getElementById("jobs").onclick =
+      () => fetch("/api/jobs").then(show);
+  </script>
+</body>
+</html>

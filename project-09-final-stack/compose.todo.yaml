@@ -1,0 +1,9 @@
+# Создай compose.yaml:
+# frontend, backend, worker, database, redis.
+# - отдельные edge и data networks;
+# - named volumes;
+# - healthchecks + service_healthy;
+# - Compose secret postgres_password;
+# - backend/worker читают POSTGRES_PASSWORD_FILE;
+# - наружу публикуется только frontend;
+# - hardening: cap_drop, no-new-privileges, read_only, tmpfs по необходимости.

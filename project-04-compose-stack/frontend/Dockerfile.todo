@@ -1,0 +1,4 @@
+# Создай frontend/Dockerfile:
+# - versioned Nginx image;
+# - скопируй site и nginx.conf;
+# - не публикуй порт в Dockerfile.

@@ -1,0 +1,14 @@
+services:
+  database:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    environment:
+      DB_HOST: localhost
+    depends_on:
+      - database

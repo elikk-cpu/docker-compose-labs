@@ -1,0 +1,6 @@
+# Production-like override:
+# использовать image references из registry;
+# никаких source bind mounts;
+# restart policies;
+# monitoring services через profile "monitoring":
+# Prometheus + Grafana.

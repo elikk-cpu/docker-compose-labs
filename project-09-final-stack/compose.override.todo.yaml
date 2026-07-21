@@ -1,0 +1,4 @@
+# Dev override:
+# bind mounts исходников при необходимости;
+# debug environment;
+# Adminer profile "tools".

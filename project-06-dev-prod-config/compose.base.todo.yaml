@@ -1,0 +1,2 @@
+# Создай compose.yaml:
+# app + database, networks, named volume и общие настройки.

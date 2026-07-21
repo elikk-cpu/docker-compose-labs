@@ -1,0 +1,3 @@
+# Создай compose.override.yaml:
+# bind mount исходников, debug env, localhost port.
+# Добавь Adminer под profile "tools".

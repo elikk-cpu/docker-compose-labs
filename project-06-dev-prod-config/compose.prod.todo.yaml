@@ -1,0 +1,3 @@
+# Создай compose.prod.yaml:
+# image вместо dev bind mounts, restart policy, read-only config,
+# отсутствие database/adminer ports.

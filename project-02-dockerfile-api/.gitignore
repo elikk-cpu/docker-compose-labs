@@ -1,0 +1,13 @@
+    .env
+    .env.local
+    .venv/
+    __pycache__/
+    *.py[cod]
+    *.log
+    .pytest_cache/
+    .idea/
+    .vscode/
+    .DS_Store
+    evidence/*.tmp
+    Dockerfile
+.dockerignore

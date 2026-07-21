@@ -1,0 +1,3 @@
+# Создай рядом файл .dockerignore.
+# Исключи как минимум:
+# Git metadata, virtualenv, bytecode, logs, RESULT/evidence и секреты.

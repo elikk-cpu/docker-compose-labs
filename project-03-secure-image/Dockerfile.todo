@@ -1,0 +1,4 @@
+# Создай Dockerfile с multi-stage build.
+# Final stage не должен содержать Go toolchain.
+# Процесс должен работать с числовым non-root UID/GID.
+# Продумай совместимость с read-only root filesystem.

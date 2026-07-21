@@ -1,0 +1,10 @@
+# Создай compose.yaml в три этапа:
+# 1. api + database;
+# 2. добавить redis;
+# 3. добавить rabbitmq + worker.
+#
+# Для database, redis и rabbitmq добавь healthchecks.
+# API должен зависеть от service_healthy.
+# Используй отдельного RabbitMQ пользователя, НЕ guest.
+# Persistent data: named volumes.
+# Наружу публикуй только API и RabbitMQ management UI при необходимости.

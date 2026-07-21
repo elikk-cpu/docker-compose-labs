@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Compose Stack</title>
+</head>
+<body>
+  <h1>Compose Stack</h1>
+  <button id="load">Получить counter</button>
+  <pre id="result">Нажми кнопку</pre>
+  <script>
+    document.getElementById("load").addEventListener("click", async () => {
+      const response = await fetch("/api/counter");
+      document.getElementById("result").textContent =
+        JSON.stringify(await response.json(), null, 2);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Создай compose.yaml для protected local registry:
+# - image registry:3;
+# - bind mount config.yml read-only;
+# - bind mount ./auth/htpasswd read-only;
+# - named volume для registry data;
+# - порт только на 127.0.0.1:5000.

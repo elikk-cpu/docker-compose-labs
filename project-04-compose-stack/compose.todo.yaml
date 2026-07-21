@@ -1,0 +1,7 @@
+# Создай рядом compose.yaml.
+# Сервисы: frontend, backend, redis.
+# Наружу публикуется только frontend.
+# Создай отдельные frontend и backend сети:
+# frontend соединяет frontend/backend;
+# backend соединяет backend/redis.
+# Не используй container_name.
