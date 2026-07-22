@@ -1,0 +1,2 @@
+NAME                  IMAGE        COMMAND                  SERVICE    CREATED          STATUS          PORTS
+registry-registry-1   registry:3   "/entrypoint.sh /etc…"   registry   25 seconds ago   Up 25 seconds   127.0.0.1:5000->5000/tcp

@@ -1,0 +1,1 @@
+tags=["hello-registry:0.1.0","localhost:5000/labuser/hello-registry:0.1.0"] digests=["hello-registry@sha256:687db7cfc7aad32b3a74e4606be1df97d8fb1258280ef9e975f835f3d1f07465","localhost:5000/labuser/hello-registry@sha256:687db7cfc7aad32b3a74e4606be1df97d8fb1258280ef9e975f835f3d1f07465"] user=10001:10001 version=0.1.0

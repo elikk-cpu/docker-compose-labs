@@ -1,0 +1,12 @@
+The push refers to repository [localhost:5000/labuser/hello-registry]
+597c6c618d36: Waiting
+2941ee8edc00: Waiting
+34aa232ecaaa: Waiting
+247b27159bd0: Waiting
+da8a9f3e1599: Waiting
+7946eec34946: Waiting
+0f9a47c379e7: Waiting
+b4558791a7f7: Waiting
+4428acbf8c6a: Waiting
+01e628bc5618: Waiting
+push access denied, repository does not exist or may require authorization: authorization failed: no basic auth credentials

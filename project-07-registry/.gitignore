@@ -9,6 +9,4 @@
     .vscode/
     .DS_Store
     evidence/*.tmp
-    Dockerfile
-compose.yaml
 registry/auth/

@@ -1,0 +1,17 @@
+0.1.0: Pulling from labuser/hello-registry
+0f9a47c379e7: Pulling fs layer
+247b27159bd0: Pulling fs layer
+da8a9f3e1599: Pulling fs layer
+7946eec34946: Pulling fs layer
+247b27159bd0: Already exists
+da8a9f3e1599: Already exists
+7946eec34946: Already exists
+01e628bc5618: Download complete
+0f9a47c379e7: Already exists
+247b27159bd0: Pull complete
+da8a9f3e1599: Pull complete
+7946eec34946: Pull complete
+0f9a47c379e7: Pull complete
+Digest: sha256:687db7cfc7aad32b3a74e4606be1df97d8fb1258280ef9e975f835f3d1f07465
+Status: Downloaded newer image for localhost:5000/labuser/hello-registry:0.1.0
+localhost:5000/labuser/hello-registry:0.1.0
