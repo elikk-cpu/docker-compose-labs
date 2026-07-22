@@ -1,0 +1,16 @@
+[
+    {
+        "CreatedAt": "2026-07-22T14:45:45Z",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "a114ada3244bae17d20be2891ea5453147ae5727a3c566109b82fadf7002aaa8",
+            "com.docker.compose.project": "broken-07-stale-volume",
+            "com.docker.compose.version": "5.3.1",
+            "com.docker.compose.volume": "database-data"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/broken-07-stale-volume_database-data/_data",
+        "Name": "broken-07-stale-volume_database-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]

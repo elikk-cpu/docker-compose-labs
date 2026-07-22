@@ -1,0 +1,5 @@
+ Network broken-06-name-conflict_default Creating 
+ Network broken-06-name-conflict_default Created 
+ Container docker-lab-fixed-name Creating 
+ service:app:1 Error response from daemon: Conflict. The container name "/docker-lab-fixed-name" is already in use by container "3dfc196b4158fef1f6ece7af30615846fb7eda28f4339cb6e61ef5276b1017cb". You have to remove (or rename) that container to be able to reuse that name. 
+Error response from daemon: Conflict. The container name "/docker-lab-fixed-name" is already in use by container "3dfc196b4158fef1f6ece7af30615846fb7eda28f4339cb6e61ef5276b1017cb". You have to remove (or rename) that container to be able to reuse that name.

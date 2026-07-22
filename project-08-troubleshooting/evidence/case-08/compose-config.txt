@@ -1,0 +1,9 @@
+name: broken-08-pull-error
+services:
+  missing:
+    image: localhost:5000/training/missing-image:9.9.9
+    networks:
+      default: null
+networks:
+  default:
+    name: broken-08-pull-error_default

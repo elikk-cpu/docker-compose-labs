@@ -1,0 +1,2 @@
+NAME                   IMAGE                COMMAND                  SERVICE   CREATED         STATUS                     PORTS
+broken-01-exit-app-1   broken-01-exit-app   "python -c 'print('c…"   app       5 seconds ago   Exited (0) 5 seconds ago   

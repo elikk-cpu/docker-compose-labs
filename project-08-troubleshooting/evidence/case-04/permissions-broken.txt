@@ -1,0 +1,2 @@
+uid=10001(app) gid=10001(app) groups=10001(app)
+drwx------ 2 0 0 4096 Jul 22 14:32 /data

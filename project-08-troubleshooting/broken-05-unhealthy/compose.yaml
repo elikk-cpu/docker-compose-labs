@@ -8,7 +8,7 @@ services:
         - -c
         - |
           import urllib.request
-          urllib.request.urlopen("http://localhost:8000/readyz", timeout=2)
+          urllib.request.urlopen("http://localhost:8000/healthz", timeout=2)
       interval: 5s
       timeout: 3s
       retries: 3

@@ -1,0 +1,2 @@
+NAME                   IMAGE                COMMAND           SERVICE   CREATED         STATUS         PORTS
+broken-01-exit-app-1   broken-01-exit-app   "python app.py"   app       5 seconds ago   Up 4 seconds   127.0.0.1:8101->8000/tcp

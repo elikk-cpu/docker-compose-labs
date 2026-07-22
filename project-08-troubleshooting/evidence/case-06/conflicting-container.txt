@@ -1,0 +1,2 @@
+CONTAINER ID   IMAGE           COMMAND                  CREATED         STATUS         PORTS     NAMES
+3dfc196b4158   alpine:3.22.2   "sh -c 'while true; …"   9 seconds ago   Up 8 seconds             docker-lab-fixed-name
