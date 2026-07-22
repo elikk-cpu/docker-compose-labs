@@ -1,0 +1,4 @@
+NAME               IMAGE                       COMMAND                  SERVICE    CREATED         STATUS                   PORTS
+dev-a-adminer-1    adminer:5.3.0-standalone    "entrypoint.sh docke…"   adminer    7 seconds ago   Up 6 seconds             127.0.0.1:8084->8080/tcp
+dev-a-app-1        dev-prod-api:0.1.0          "flask --app app run…"   app        9 minutes ago   Up 9 minutes (healthy)   127.0.0.1:8083->5000/tcp
+dev-a-database-1   postgres:17.10-alpine3.23   "docker-entrypoint.s…"   database   9 minutes ago   Up 9 minutes (healthy)   127.0.0.1:5433->5432/tcp

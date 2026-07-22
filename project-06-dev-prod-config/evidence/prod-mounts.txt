@@ -1,0 +1,2 @@
+/home/aa/docker-compose-labs/project-06-dev-prod-config/config/app-config.yaml -> /app/config/app-config.yaml RW= false
+

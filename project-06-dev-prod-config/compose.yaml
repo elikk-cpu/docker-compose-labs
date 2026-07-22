@@ -1,0 +1,40 @@
+services:
+  app:
+    image: ${APP_IMAGE}:${APP_VERSION}
+    environment:
+      APP_CONFIG_FILE: /app/config/app-config.yaml
+    volumes:
+      - ./config/app-config.yaml:/app/config/app-config.yaml:ro
+    depends_on:
+      database:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/healthz', timeout=2)
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+  database:
+    image: postgres:17.10-alpine3.23
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  postgres_data:

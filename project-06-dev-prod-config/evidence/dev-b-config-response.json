@@ -1,0 +1,10 @@
+{
+  "environment": "development",
+  "file_config": {
+    "feature_flags": {
+      "demo": true
+    },
+    "message": "base-config"
+  },
+  "log_level": "from-dotenv"
+}
