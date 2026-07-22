@@ -1,0 +1,4 @@
+services:
+  frontend:
+    volumes:
+      - ./broken/case-02/nginx.broken.conf:/etc/nginx/conf.d/default.conf:ro

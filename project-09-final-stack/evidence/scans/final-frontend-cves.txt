@@ -1,0 +1,67 @@
+    ...Storing image for indexing
+    ✓ Image stored for indexing
+    ...Indexing
+    ✓ Indexed 87 packages
+    ✓ Provenance obtained from attestation
+    ✗ Detected 2 vulnerable packages with a total of 4 vulnerabilities
+
+
+## Overview
+
+                   │                    Analyzed Image                     
+───────────────────┼───────────────────────────────────────────────────────
+ Target            │  local://localhost:5000/labuser/final-frontend:1.0.0  
+   digest          │  d84ec4082d45                                         
+   platform        │ linux/amd64                                           
+   provenance      │ git@github.com:elikk-cpu/docker-compose-labs.git      
+                   │  https://github.com/elikk-cpu/docker-compose-labs/blob/d596dafb9f0f81c58868b34ad698063b7d3f3b92             
+   vulnerabilities │    0C     0H     0M     2L     2?                     
+   size            │ 26 MB                                                 
+   packages        │ 87                                                    
+                   │                                                       
+ Base image        │  nginx:1.30.4-alpine3.24                              
+                   │  97d490c12ba5                                         
+
+
+## Packages and Vulnerabilities
+
+   0C     0H     0M     2L     1?  libxml2 2.13.9-r2
+pkg:apk/alpine/libxml2@2.13.9-r2?os_name=alpine&os_version=3.24
+
+    ✗ LOW CVE-2026-0989
+      https://scout.docker.com/v/CVE-2026-0989?s=alpine&n=libxml2&ns=alpine&t=apk&osn=alpine&osv=3.24&vr=%3C%3D2.13.9-r2
+      Affected range : <=2.13.9-r2 
+      Fixed version  : not fixed   
+    
+    ✗ LOW CVE-2025-8732
+      https://scout.docker.com/v/CVE-2025-8732?s=alpine&n=libxml2&ns=alpine&t=apk&osn=alpine&osv=3.24&vr=%3C%3D2.13.9-r2
+      Affected range : <=2.13.9-r2 
+      Fixed version  : not fixed   
+    
+    ✗ UNSPECIFIED CVE-2026-11979
+      https://scout.docker.com/v/CVE-2026-11979?s=alpine&n=libxml2&ns=alpine&t=apk&osn=alpine&osv=3.24&vr=%3C%3D2.13.9-r2
+      Affected range : <=2.13.9-r2 
+      Fixed version  : not fixed   
+    
+
+   0C     0H     0M     0L     1?  nghttp2 1.69.0-r0
+pkg:apk/alpine/nghttp2@1.69.0-r0?os_name=alpine&os_version=3.24
+
+    ✗ UNSPECIFIED CVE-2026-58055
+      https://scout.docker.com/v/CVE-2026-58055?s=alpine&n=nghttp2&ns=alpine&t=apk&osn=alpine&osv=3.24&vr=%3C%3D1.69.0-r0
+      Affected range : <=1.69.0-r0 
+      Fixed version  : not fixed   
+    
+
+
+4 vulnerabilities found in 2 packages
+  CRITICAL     0 
+  HIGH         0 
+  MEDIUM       0 
+  LOW          2 
+  UNSPECIFIED  2 
+
+
+What's next:
+    View base image update recommendations → docker scout recommendations local://localhost:5000/labuser/final-frontend:1.0.0
+

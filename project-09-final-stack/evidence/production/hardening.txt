@@ -1,0 +1,3 @@
+frontend user=101:101 readonly=true caps=["ALL"] security=["no-new-privileges:true"] tmpfs={"/tmp":""}
+backend user=10001:10001 readonly=true caps=["ALL"] security=["no-new-privileges:true"] tmpfs={"/tmp":""}
+worker user=10001:10001 readonly=true caps=["ALL"] security=["no-new-privileges:true"] tmpfs={"/tmp":""}

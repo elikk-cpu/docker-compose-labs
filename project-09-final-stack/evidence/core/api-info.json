@@ -1,0 +1,11 @@
+{
+  "config": {
+    "environment_name": "training",
+    "features": {
+      "job_queue": true,
+      "monitoring": true
+    }
+  },
+  "service": "final-backend",
+  "version": "1.0.0"
+}

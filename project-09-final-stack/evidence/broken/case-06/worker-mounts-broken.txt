@@ -1,0 +1,4 @@
+bind /home/aa/docker-compose-labs/project-09-final-stack/worker/worker.py -> /app/worker.py RW= false
+bind /home/aa/docker-compose-labs/project-09-final-stack/worker/healthcheck.py -> /app/healthcheck.py RW= false
+bind /home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt -> /run/secrets/postgres_password RW= false
+

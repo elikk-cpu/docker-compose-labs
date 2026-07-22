@@ -1,0 +1,3 @@
+bind /home/aa/docker-compose-labs/project-09-final-stack/config/app-config.yaml -> /app/config/app-config.yaml RW= false
+bind /home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt -> /run/secrets/postgres_password RW= false
+

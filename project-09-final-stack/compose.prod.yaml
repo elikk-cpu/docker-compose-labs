@@ -1,0 +1,71 @@
+services:
+  frontend:
+    image: ${REGISTRY_HOST}/${REGISTRY_NAMESPACE}/final-frontend:${APP_VERSION}
+
+  backend:
+    image: ${REGISTRY_HOST}/${REGISTRY_NAMESPACE}/final-backend:${APP_VERSION}
+    environment:
+      APP_ENV: production
+    networks:
+      - edge
+      - data
+      - monitoring
+
+  worker:
+    image: ${REGISTRY_HOST}/${REGISTRY_NAMESPACE}/final-worker:${APP_VERSION}
+    environment:
+      APP_ENV: production
+
+  prometheus:
+    image: prom/prometheus:v3.4.0
+    profiles:
+      - monitoring
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+    volumes:
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "127.0.0.1:${PROMETHEUS_PORT}:9090"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - monitoring
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+  grafana:
+    image: grafana/grafana:12.2.10-ubuntu
+    profiles:
+      - monitoring
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD__FILE: /run/secrets/grafana_admin_password
+    secrets:
+      - grafana_admin_password
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+    ports:
+      - "127.0.0.1:${GRAFANA_PORT}:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  monitoring:
+
+volumes:
+  prometheus_data:
+  grafana_data:
+
+secrets:
+  grafana_admin_password:
+    file: ./secrets/grafana_admin_password.txt

@@ -1,0 +1,7 @@
+services:
+  backend:
+    volumes: !override
+      - ./config/app-config.yaml:/app/config/app-config.yaml:ro
+
+  worker:
+    volumes: !override []

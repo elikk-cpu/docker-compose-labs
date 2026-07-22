@@ -1,0 +1,11 @@
+The push refers to repository [localhost:5000/labuser/final-worker]
+597c6c618d36: Mounted from labuser/hello-registry
+2941ee8edc00: Mounted from labuser/hello-registry
+34aa232ecaaa: Mounted from labuser/hello-registry
+61d82506b6c3: Pushed
+b4558791a7f7: Mounted from labuser/hello-registry
+f1549886b38e: Mounted from labuser/final-backend
+7100406c946a: Mounted from labuser/final-backend
+0cbcbc5baa87: Pushed
+f17cda3c2e50: Pushed
+1.0.0: digest: sha256:c1dddd042d0ff3cbf2ca3230b2b51f7d523710c0ddef9ade4fb68a05b88f1c1d size: 856

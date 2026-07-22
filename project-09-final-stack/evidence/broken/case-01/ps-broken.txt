@@ -1,0 +1,6 @@
+NAME                         IMAGE                                         COMMAND                  SERVICE    CREATED         STATUS                     PORTS
+final-broken-01-backend-1    localhost:5000/labuser/final-backend:1.0.0    "gunicorn --config g…"   backend    2 minutes ago   Up 2 minutes (unhealthy)   8000/tcp
+final-broken-01-database-1   postgres:17.10-alpine3.23                     "docker-entrypoint.s…"   database   2 minutes ago   Up 2 minutes (healthy)     5432/tcp
+final-broken-01-frontend-1   localhost:5000/labuser/final-frontend:1.0.0   "/docker-entrypoint.…"   frontend   2 minutes ago   Created                    
+final-broken-01-redis-1      redis:8.6.4-alpine3.23                        "docker-entrypoint.s…"   redis      2 minutes ago   Up 2 minutes (healthy)     6379/tcp
+final-broken-01-worker-1     localhost:5000/labuser/final-worker:1.0.0     "python worker.py"       worker     2 minutes ago   Up 2 minutes (healthy)     

@@ -1,0 +1,2 @@
+bind /home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt -> /run/secrets/postgres_password RW= false
+

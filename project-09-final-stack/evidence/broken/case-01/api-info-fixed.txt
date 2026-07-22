@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Server: nginx/1.30.4
+Date: Wed, 22 Jul 2026 16:44:32 GMT
+Content-Type: application/json
+Content-Length: 135
+Connection: keep-alive
+
+{"config":{"environment_name":"training","features":{"job_queue":true,"monitoring":true}},"service":"final-backend","version":"1.0.0"}

@@ -1,0 +1,5 @@
+   key   |     value      
+---------+----------------
+ release | second-version
+(1 row)
+

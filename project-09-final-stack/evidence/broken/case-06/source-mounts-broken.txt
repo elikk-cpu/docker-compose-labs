@@ -1,0 +1,4 @@
+52:        target: /app/app.py
+175:        - /app/healthcheck.py
+195:        target: /app/worker.py
+200:        target: /app/healthcheck.py

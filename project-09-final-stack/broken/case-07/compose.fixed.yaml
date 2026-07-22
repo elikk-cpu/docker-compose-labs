@@ -1,0 +1,3 @@
+services:
+  worker:
+    user: "10001:10001"

@@ -1,0 +1,56 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend/site:/usr/share/nginx/html:ro
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
+  backend:
+    build:
+      context: ./backend
+      network: host
+      args:
+        APP_VERSION: ${APP_VERSION}
+    environment:
+      APP_ENV: development
+    command:
+      - flask
+      - --app
+      - app
+      - run
+      - --host=0.0.0.0
+      - --port=8000
+      - --debug
+    volumes:
+      - ./backend/app.py:/app/app.py:ro
+      - ./backend/gunicorn.conf.py:/app/gunicorn.conf.py:ro
+      - ./config/app-config.yaml:/app/config/app-config.yaml:ro
+
+  worker:
+    build:
+      context: ./worker
+      network: host
+    environment:
+      APP_ENV: development
+    volumes:
+      - ./worker/worker.py:/app/worker.py:ro
+      - ./worker/healthcheck.py:/app/healthcheck.py:ro
+
+  database:
+    ports:
+      - "127.0.0.1:${POSTGRES_DEV_PORT}:5432"
+
+  adminer:
+    image: adminer:5.3.0-standalone
+    profiles:
+      - tools
+    environment:
+      ADMINER_DEFAULT_SERVER: database
+    ports:
+      - "127.0.0.1:${ADMINER_PORT}:8080"
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - data
