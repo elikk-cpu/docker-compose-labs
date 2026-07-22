@@ -1,0 +1,3 @@
+NAME               IMAGE                       COMMAND                  SERVICE    CREATED         STATUS                   PORTS
+dev-b-app-1        dev-prod-api:0.1.0          "flask --app app run…"   app        5 minutes ago   Up 5 minutes (healthy)   127.0.0.1:8085->5000/tcp
+dev-b-database-1   postgres:17.10-alpine3.23   "docker-entrypoint.s…"   database   5 minutes ago   Up 5 minutes (healthy)   127.0.0.1:5434->5432/tcp

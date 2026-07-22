@@ -1,0 +1,104 @@
+name: project-06-dev-prod-config
+services:
+  adminer:
+    profiles:
+      - tools
+    depends_on:
+      database:
+        condition: service_healthy
+        required: true
+    environment:
+      ADMINER_DEFAULT_SERVER: database
+    image: adminer:5.3.0-standalone
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 8080
+        published: "8084"
+        protocol: tcp
+  app:
+    build:
+      context: /home/aa/docker-compose-labs/project-06-dev-prod-config/app
+      dockerfile: Dockerfile
+      network: host
+    command:
+      - flask
+      - --app
+      - app
+      - run
+      - --host=0.0.0.0
+      - --port=5000
+      - --debug
+    depends_on:
+      database:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_CONFIG_FILE: /app/config/app-config.yaml
+      APP_ENV: development
+      LOG_LEVEL: from-dotenv
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/healthz',
+          timeout=2)
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 10s
+    image: dev-prod-api:0.1.0
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 5000
+        published: "8083"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /home/aa/docker-compose-labs/project-06-dev-prod-config/config/app-config.yaml
+        target: /app/config/app-config.yaml
+        read_only: true
+        bind: {}
+      - type: bind
+        source: /home/aa/docker-compose-labs/project-06-dev-prod-config/app/app.py
+        target: /app/app.py
+        bind: {}
+  database:
+    environment:
+      POSTGRES_DB: app
+      POSTGRES_PASSWORD: <redacted>
+      POSTGRES_USER: app
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 10s
+    image: postgres:17.10-alpine3.23
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 5432
+        published: "5433"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: postgres_data
+        target: /var/lib/postgresql/data
+        volume: {}
+networks:
+  default:
+    name: project-06-dev-prod-config_default
+volumes:
+  postgres_data:
+    name: project-06-dev-prod-config_postgres_data
