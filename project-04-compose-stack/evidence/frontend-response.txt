@@ -1,0 +1,29 @@
+HTTP/1.1 200 OK
+Server: nginx/1.30.4
+Date: Wed, 22 Jul 2026 11:59:13 GMT
+Content-Type: text/html
+Content-Length: 524
+Last-Modified: Tue, 21 Jul 2026 13:18:18 GMT
+Connection: keep-alive
+ETag: "6a5f719a-20c"
+Accept-Ranges: bytes
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Compose Stack</title>
+</head>
+<body>
+  <h1>Compose Stack</h1>
+  <button id="load">Получить counter</button>
+  <pre id="result">Нажми кнопку</pre>
+  <script>
+    document.getElementById("load").addEventListener("click", async () => {
+      const response = await fetch("/api/counter");
+      document.getElementById("result").textContent =
+        JSON.stringify(await response.json(), null, 2);
+    });
+  </script>
+</body>
+</html>

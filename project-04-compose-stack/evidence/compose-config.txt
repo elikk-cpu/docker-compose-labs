@@ -1,0 +1,47 @@
+name: project-04-compose-stack
+services:
+  backend:
+    build:
+      context: /home/aa/docker-compose-labs/project-04-compose-stack/backend
+      dockerfile: Dockerfile
+      network: host
+    depends_on:
+      redis:
+        condition: service_started
+        required: true
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    image: compose-lab-backend:0.1.0
+    networks:
+      backend_net: null
+      frontend_net: null
+    restart: unless-stopped
+  frontend:
+    build:
+      context: /home/aa/docker-compose-labs/project-04-compose-stack/frontend
+      dockerfile: Dockerfile
+    depends_on:
+      backend:
+        condition: service_started
+        required: true
+    image: compose-lab-frontend:0.1.0
+    networks:
+      frontend_net: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 8080
+        published: "8080"
+        protocol: tcp
+    restart: unless-stopped
+  redis:
+    image: redis:7.4.2-alpine3.21
+    networks:
+      backend_net: null
+    restart: unless-stopped
+networks:
+  backend_net:
+    name: project-04-compose-stack_backend_net
+  frontend_net:
+    name: project-04-compose-stack_frontend_net
