@@ -1,0 +1,6 @@
+NAME                                          IMAGE                              COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+project-05-data-and-healthchecks-api-1        data-health-api:0.1.0              "gunicorn --bind 0.0…"   api        9 minutes ago    Up 9 minutes (healthy)    127.0.0.1:8082->5000/tcp
+project-05-data-and-healthchecks-database-1   postgres:17.10-alpine3.23          "docker-entrypoint.s…"   database   10 minutes ago   Up 10 minutes (healthy)   5432/tcp
+project-05-data-and-healthchecks-rabbitmq-1   rabbitmq:4.3.1-management-alpine   "docker-entrypoint.s…"   rabbitmq   9 minutes ago    Up 6 minutes (healthy)    4369/tcp, 5671-5672/tcp, 15671-15672/tcp, 15691-15692/tcp, 25672/tcp
+project-05-data-and-healthchecks-redis-1      redis:8.6.4-alpine3.23             "docker-entrypoint.s…"   redis      9 minutes ago    Up 9 minutes (healthy)    6379/tcp
+project-05-data-and-healthchecks-worker-1     data-health-worker:0.1.0           "python worker.py"       worker     9 minutes ago    Up 7 minutes              

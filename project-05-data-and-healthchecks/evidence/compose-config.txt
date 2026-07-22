@@ -1,0 +1,161 @@
+name: project-05-data-and-healthchecks
+services:
+  api:
+    build:
+      context: /home/aa/docker-compose-labs/project-05-data-and-healthchecks/api
+      dockerfile: Dockerfile
+      network: host
+    depends_on:
+      database:
+        condition: service_healthy
+        required: true
+      rabbitmq:
+        condition: service_healthy
+        required: true
+      redis:
+        condition: service_healthy
+        required: true
+    environment:
+      POSTGRES_DB: jobs
+      POSTGRES_HOST: database
+      POSTGRES_PASSWORD: jobs-local-2026
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: jobs
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PASS: rabbit-local-2026
+      RABBITMQ_PORT: "5672"
+      RABBITMQ_USER: labuser
+      RABBITMQ_VHOST: /
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/readyz',
+          timeout=2)
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 10s
+    image: data-health-api:0.1.0
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 5000
+        published: "8082"
+        protocol: tcp
+    restart: unless-stopped
+  database:
+    environment:
+      POSTGRES_DB: jobs
+      POSTGRES_PASSWORD: jobs-local-2026
+      POSTGRES_USER: jobs
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 10s
+    image: postgres:17.10-alpine3.23
+    networks:
+      default: null
+    restart: unless-stopped
+    volumes:
+      - type: volume
+        source: postgres_data
+        target: /var/lib/postgresql/data
+        volume: {}
+      - type: bind
+        source: /home/aa/docker-compose-labs/project-05-data-and-healthchecks/db/init
+        target: /docker-entrypoint-initdb.d
+        read_only: true
+        bind: {}
+  rabbitmq:
+    environment:
+      RABBITMQ_DEFAULT_PASS: rabbit-local-2026
+      RABBITMQ_DEFAULT_USER: labuser
+      RABBITMQ_DEFAULT_VHOST: /
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - rabbitmq-diagnostics -q ping && rabbitmqctl authenticate_user "$${RABBITMQ_DEFAULT_USER}"
+          "$${RABBITMQ_DEFAULT_PASS}"
+      timeout: 5s
+      interval: 5s
+      retries: 20
+      start_period: 20s
+    image: rabbitmq:4.3.1-management-alpine
+    networks:
+      default: null
+    restart: unless-stopped
+    volumes:
+      - type: volume
+        source: rabbitmq_data
+        target: /var/lib/rabbitmq
+        volume: {}
+  redis:
+    command:
+      - redis-server
+      - --appendonly
+      - 'yes'
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 5s
+    image: redis:8.6.4-alpine3.23
+    networks:
+      default: null
+    restart: unless-stopped
+    volumes:
+      - type: volume
+        source: redis_data
+        target: /data
+        volume: {}
+  worker:
+    build:
+      context: /home/aa/docker-compose-labs/project-05-data-and-healthchecks/worker
+      dockerfile: Dockerfile
+      network: host
+    depends_on:
+      database:
+        condition: service_healthy
+        required: true
+      rabbitmq:
+        condition: service_healthy
+        required: true
+    environment:
+      POSTGRES_DB: jobs
+      POSTGRES_HOST: database
+      POSTGRES_PASSWORD: jobs-local-2026
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: jobs
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PASS: rabbit-local-2026
+      RABBITMQ_PORT: "5672"
+      RABBITMQ_USER: labuser
+      RABBITMQ_VHOST: /
+    image: data-health-worker:0.1.0
+    networks:
+      default: null
+    restart: unless-stopped
+networks:
+  default:
+    name: project-05-data-and-healthchecks_default
+volumes:
+  postgres_data:
+    name: project-05-data-and-healthchecks_postgres_data
+  rabbitmq_data:
+    name: project-05-data-and-healthchecks_rabbitmq_data
+  redis_data:
+    name: project-05-data-and-healthchecks_redis_data

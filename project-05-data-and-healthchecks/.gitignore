@@ -9,6 +9,3 @@
     .vscode/
     .DS_Store
     evidence/*.tmp
-    compose.yaml
-api/Dockerfile
-worker/Dockerfile

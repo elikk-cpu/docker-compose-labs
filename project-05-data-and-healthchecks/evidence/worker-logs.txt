@@ -1,0 +1,54 @@
+worker-1  | worker waiting for jobs
+worker-1  | processed: {'task': 'demo-project-05'}
+worker-1  | Traceback (most recent call last):
+worker-1  |   File "/app/worker.py", line 60, in <module>
+worker-1  |     channel.start_consuming()
+worker-1  |     ~~~~~~~~~~~~~~~~~~~~~~~^^
+worker-1  |   File "/usr/local/lib/python3.13/site-packages/pika/adapters/blocking_connection.py", line 1883, in start_consuming
+worker-1  |     self._process_data_events(time_limit=None)
+worker-1  |     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+worker-1  |   File "/usr/local/lib/python3.13/site-packages/pika/adapters/blocking_connection.py", line 2044, in _process_data_events
+worker-1  |     self.connection.process_data_events(time_limit=time_limit)
+worker-1  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  |   File "/usr/local/lib/python3.13/site-packages/pika/adapters/blocking_connection.py", line 842, in process_data_events
+worker-1  |     self._flush_output(common_terminator)
+worker-1  |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+worker-1  |   File "/usr/local/lib/python3.13/site-packages/pika/adapters/blocking_connection.py", line 523, in _flush_output
+worker-1  |     raise self._closed_result.value.error
+worker-1  | pika.exceptions.ConnectionClosedByBroker: (320, "CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'")
+worker-1  | rabbitmq not ready: 
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: [Errno -3] Temporary failure in name resolution
+worker-1  | rabbitmq not ready: 
+worker-1  | rabbitmq not ready: 
+worker-1  | rabbitmq not ready: 
+worker-1  | worker waiting for jobs
+worker-1  | processed: {'task': 'final-project-05-test'}
