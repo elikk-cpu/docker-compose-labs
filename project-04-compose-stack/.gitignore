@@ -10,5 +10,3 @@
     .DS_Store
     evidence/*.tmp
     compose.yaml
-backend/Dockerfile
-frontend/Dockerfile
