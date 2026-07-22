@@ -1,0 +1,10 @@
+.git
+.gitignore
+.env
+.env.local
+evidence/
+registry/auth/
+RESULT.md
+RESULT_TEMPLATE.md
+Dockerfile.todo
+*.log
