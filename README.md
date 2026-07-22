@@ -1,95 +1,193 @@
-# docker-compose-labs
+# Docker & Docker Compose Labs
 
-Практический маршрут по Docker и Docker Compose до уровня уверенного Junior DevOps.
+![Docker](https://img.shields.io/badge/Docker-Engine-2496ED?logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
+![Projects](https://img.shields.io/badge/Projects-9%2F9-success)
+![Level](https://img.shields.io/badge/Level-Junior%20DevOps-informational)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-Это **starter kit, а не набор готовых решений**. Код учебных приложений и намеренно
-сломанные сценарии уже подготовлены. Dockerfile, Compose-конфигурации и отчёты,
-которые являются сутью задания, ты создаёшь или исправляешь самостоятельно.
+Практический репозиторий по Docker и Docker Compose: от запуска первого
+контейнера до production-like стека с PostgreSQL, Redis, worker, локальным
+registry, security hardening, Prometheus и Grafana.
 
-## Маршрут
+Все девять проектов завершены, проверены по acceptance-критериям и сохранены
+отдельными Git-тегами `project-01-complete` — `project-09-complete`.
 
-| № | Каталог | Проект | Основной результат |
-|---|---|---|---|
-| 01 | `project-01-container-runtime` | Контейнер как runtime-единица | Уверенный `docker run`, mounts, ports, networks и диагностика |
-| 02 | `project-02-dockerfile-api` | Первый Dockerfile | Контейнеризация HTTP API, cache и `.dockerignore` |
-| 03 | `project-03-secure-image` | Безопасный production image | Multi-stage, non-root, scanning и hardening |
-| 04 | `project-04-compose-stack` | Первый Compose-стек | Frontend + backend + Redis, service DNS |
-| 05 | `project-05-data-and-healthchecks` | Данные и readiness | PostgreSQL + Redis + RabbitMQ + worker |
-| 06 | `project-06-dev-prod-config` | Dev/prod-конфигурации | Override-файлы, profiles и merge behavior |
-| 07 | `project-07-registry` | Registry | Login, tagging, push/pull и protected local registry |
-| 08 | `project-08-troubleshooting` | Лаборатория поломок | Системная диагностика восьми неисправностей |
-| 09 | `project-09-final-stack` | Финальный стек | Полный Junior DevOps Docker/Compose-проект |
+## Что демонстрирует репозиторий
 
-Проходи проекты строго последовательно.
+- воспроизводимые Docker images и versioned tags без `latest`;
+- Dockerfile, build cache, layers и `.dockerignore`;
+- multi-stage builds и минимизация images;
+- non-root runtime, `read_only`, `tmpfs`, `cap_drop` и `no-new-privileges`;
+- Compose services, DNS, networks, profiles и override-файлы;
+- named volumes, persistence, healthchecks и readiness;
+- PostgreSQL, Redis, RabbitMQ и background workers;
+- Compose secrets и поддержка `*_FILE`;
+- authenticated local registry, push/pull и image digests;
+- Docker Scout image scanning;
+- Prometheus metrics и Grafana provisioning;
+- системная диагностика контейнерных неисправностей.
 
-## Общие правила
+## Проекты
 
-1. Не используй `latest`.
-2. Не храни реальные секреты в Git или image.
-3. Не используй `--privileged`, если задание прямо этого не требует.
-4. Не исправляй контейнер вручную через `docker exec` как постоянное решение.
-5. Для Compose всегда проверяй итог через `docker compose config`.
-6. Документируй не только команды, но и причины решений.
-7. `RESULT.md` должен коммититься — он намеренно **не добавлен** в `.gitignore`.
-8. Проверяй, что важные данные переживают пересоздание контейнера.
-9. Публикуй наружу только необходимые порты.
-10. Сначала ищи root cause, затем исправляй.
+| № | Проект | Практический результат | Документация |
+|---:|---|---|---|
+| 01 | Container runtime | `docker run`, ports, mounts, networks, logs, exit codes и copy-on-write | [README](project-01-container-runtime/README.md) · [RESULT](project-01-container-runtime/RESULT.md) |
+| 02 | Dockerfile API | Контейнеризация Flask API, build cache и `.dockerignore` | [README](project-02-dockerfile-api/README.md) · [RESULT](project-02-dockerfile-api/RESULT.md) |
+| 03 | Secure image | Multi-stage Go image, non-root runtime, hardening и scanning | [README](project-03-secure-image/README.md) · [RESULT](project-03-secure-image/RESULT.md) |
+| 04 | Compose stack | Nginx frontend, backend, Redis, service DNS и разделение сетей | [README](project-04-compose-stack/README.md) · [RESULT](project-04-compose-stack/RESULT.md) |
+| 05 | Data and healthchecks | PostgreSQL, Redis, RabbitMQ, worker, persistence и readiness | [README](project-05-data-and-healthchecks/README.md) · [RESULT](project-05-data-and-healthchecks/RESULT.md) |
+| 06 | Dev/prod configuration | Compose overrides, profiles, environment precedence и parallel project names | [README](project-06-dev-prod-config/README.md) · [RESULT](project-06-dev-prod-config/RESULT.md) |
+| 07 | Private registry | Basic auth, tagging, push/pull, persistence и digest verification | [README](project-07-registry/README.md) · [RESULT](project-07-registry/RESULT.md) |
+| 08 | Troubleshooting | Восемь воспроизводимых неисправностей с root-cause analysis | [README](project-08-troubleshooting/README.md) · [RESULT](project-08-troubleshooting/RESULT.md) |
+| 09 | Final stack | Полный production-like Docker Compose проект уровня Junior DevOps | [README](project-09-final-stack/README.md) · [RUNBOOK](project-09-final-stack/RUNBOOK.md) · [RESULT](project-09-final-stack/RESULT.md) |
 
-## Git workflow
-
-```bash
-git init -b main
-git add .
-git commit -m "init: add docker-compose-labs starter kit"
-
-git switch -c project-01-container-runtime
-```
-
-Делай небольшие содержательные коммиты:
+## Финальный стек
 
 ```text
-project-01: add reproducible runtime command
-project-01: document port mapping failure
-project-02: optimize dependency cache
-project-03: switch to multi-stage non-root image
+Browser
+   |
+   v
+Frontend (Nginx)
+   |
+   v
+Backend (Flask/Gunicorn) ------> PostgreSQL
+   |
+   v
+Redis queue
+   |
+   v
+Worker ------------------------> PostgreSQL
+
+Monitoring profile:
+Prometheus ------> Backend /metrics
+Grafana ---------> Prometheus
 ```
 
-После приёмки проекта:
+### Основные свойства
+
+- наружу публикуется только frontend;
+- PostgreSQL и Redis доступны только во внутренней `data` network;
+- frontend отделён от database;
+- backend и worker запускаются от UID/GID `10001:10001`;
+- PostgreSQL password передаётся через Compose secret;
+- production-like конфигурация использует registry images без source bind mounts;
+- core services используют readiness-oriented healthchecks;
+- monitoring запускается только через profile `monitoring`;
+- Adminer запускается только через profile `tools`.
+
+## Быстрый запуск финального dev-стека
 
 ```bash
-git switch main
-git merge project-01-container-runtime
-git tag project-01-complete
+cd project-09-final-stack
+
+cp .env.example .env
+
+mkdir -p secrets
+openssl rand -hex 24 > secrets/postgres_password.txt
+openssl rand -hex 24 > secrets/grafana_admin_password.txt
+
+sudo chown 0:10001 secrets/postgres_password.txt
+sudo chmod 0440 secrets/postgres_password.txt
+chmod 0600 secrets/grafana_admin_password.txt
+
+docker compose config
+docker compose up -d --build --wait
+docker compose ps
 ```
 
-## Как сдавать проект
-
-1. Создай `RESULT.md` на основе `RESULT_TEMPLATE.md`.
-2. Приложи релевантный вывод проверок из `acceptance.md`.
-3. Не вставляй огромный необработанный `docker inspect`: используй `--format`
-   или приложи только нужные секции.
-4. Ответь на вопросы из `questions.md`.
-5. Укажи места, в которых сомневаешься.
-
-## Поддерживаемые терминалы
-
-Команды в заданиях ориентированы на Bash/WSL/Git Bash. Для PowerShell смотри
-[`docs/SHELLS.md`](docs/SHELLS.md).
-
-## Быстрая проверка starter kit
+Проверка API:
 
 ```bash
-python scripts/validate_repo.py
+curl -i http://127.0.0.1:8080/api/info
+
+curl -i   -X POST   -H "Content-Type: application/json"   -d '{"task":"portfolio-demo"}'   http://127.0.0.1:8080/api/jobs
+
+curl -i http://127.0.0.1:8080/api/jobs
 ```
 
-## Прогресс
+Остановка с сохранением named volumes:
 
-- [ ] Project 01
-- [ ] Project 02
-- [ ] Project 03
-- [ ] Project 04
-- [ ] Project 05
-- [ ] Project 06
-- [ ] Project 07
-- [ ] Project 08
-- [ ] Project 09
+```bash
+docker compose down
+```
+
+Подробные инструкции:  
+[Project 09 Runbook](project-09-final-stack/RUNBOOK.md)
+
+## Troubleshooting
+
+В проектах 08 и 09 воспроизведены и диагностированы типовые проблемы:
+
+- container exits with code `0`, но сервис не работает;
+- опубликован неправильный container port;
+- `localhost` используется вместо Compose service name;
+- non-root процесс не имеет прав записи;
+- container `running`, но `unhealthy`;
+- фиксированный `container_name` создаёт конфликт;
+- PostgreSQL init SQL не применяется к существующему volume;
+- registry authentication и отсутствующий tag;
+- backend не получает secret;
+- production override возвращает source bind mounts;
+- worker запускается от root.
+
+Для каждого сценария сохранены symptom, evidence, root cause, минимальное
+исправление и проверка результата.
+
+## Структура репозитория
+
+```text
+docker-compose-labs/
+├── project-01-container-runtime/
+├── project-02-dockerfile-api/
+├── project-03-secure-image/
+├── project-04-compose-stack/
+├── project-05-data-and-healthchecks/
+├── project-06-dev-prod-config/
+├── project-07-registry/
+├── project-08-troubleshooting/
+├── project-09-final-stack/
+├── docs/
+├── scripts/
+└── VERSIONS.md
+```
+
+## Принципы выполнения
+
+- не использовать `latest`;
+- не коммитить реальные secrets и локальные `.env`;
+- не использовать `--privileged` без обоснования;
+- проверять итоговый merge через `docker compose config`;
+- не использовать restart или prune вместо root-cause analysis;
+- публиковать наружу только необходимые ports;
+- изменять инфраструктуру декларативно, а не вручную внутри контейнера;
+- фиксировать acceptance evidence и инженерные решения в `RESULT.md`.
+
+## Git history
+
+Каждый проект выполнялся в отдельной ветке, после приёмки объединялся с
+`main` и отмечался тегом:
+
+```text
+project-01-complete
+project-02-complete
+project-03-complete
+project-04-complete
+project-05-complete
+project-06-complete
+project-07-complete
+project-08-complete
+project-09-complete
+```
+
+## Следующий этап
+
+Следующее развитие репозитория:
+
+- GitHub Actions CI;
+- автоматическая проверка Compose;
+- build и smoke tests;
+- image vulnerability scanning;
+- публикация versioned images;
+- дальнейшая миграция финального стека в Kubernetes и Helm.
+
