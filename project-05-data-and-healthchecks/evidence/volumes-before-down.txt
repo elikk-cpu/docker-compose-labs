@@ -1,0 +1,3 @@
+local     project-05-data-and-healthchecks_postgres_data
+local     project-05-data-and-healthchecks_rabbitmq_data
+local     project-05-data-and-healthchecks_redis_data
