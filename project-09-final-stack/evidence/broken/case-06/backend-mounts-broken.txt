@@ -1,0 +1,5 @@
+bind /home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt -> /run/secrets/postgres_password RW= false
+bind /home/aa/docker-compose-labs/project-09-final-stack/backend/app.py -> /app/app.py RW= false
+bind /home/aa/docker-compose-labs/project-09-final-stack/backend/gunicorn.conf.py -> /app/gunicorn.conf.py RW= false
+bind /home/aa/docker-compose-labs/project-09-final-stack/config/app-config.yaml -> /app/config/app-config.yaml RW= false
+

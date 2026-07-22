@@ -1,0 +1,194 @@
+name: final-broken-05
+services:
+  backend:
+    cap_drop:
+      - ALL
+    depends_on:
+      database:
+        condition: service_healthy
+        required: true
+      redis:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_CONFIG_FILE: /app/config/app-config.yaml
+      APP_ENV: production
+      APP_VERSION: 1.0.0
+      POSTGRES_DB: app
+      POSTGRES_HOST: database
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: app
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/readyz',
+          timeout=2)
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 10s
+    image: localhost:5000/labuser/final-backend:1.0.0
+    networks:
+      data: null
+      edge: null
+      monitoring: null
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
+    volumes:
+      - type: bind
+        source: /home/aa/docker-compose-labs/project-09-final-stack/config/app-config.yaml
+        target: /app/config/app-config.yaml
+        read_only: true
+        bind: {}
+  database:
+    environment:
+      POSTGRES_DB: app
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_USER: app
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 10s
+    image: postgres:17.10-alpine3.23
+    networks:
+      data: null
+    restart: unless-stopped
+    secrets:
+      - source: postgres_password
+        target: /run/secrets/postgres_password
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - type: volume
+        source: postgres_data
+        target: /var/lib/postgresql/data
+        volume: {}
+      - type: bind
+        source: /home/aa/docker-compose-labs/project-09-final-stack/db/init
+        target: /docker-entrypoint-initdb.d
+        read_only: true
+        bind: {}
+  frontend:
+    cap_drop:
+      - ALL
+    depends_on:
+      backend:
+        condition: service_healthy
+        required: true
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget -q -O /dev/null http://127.0.0.1:8080/ || exit 1
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 5s
+    image: localhost:5000/labuser/final-frontend:1.0.0
+    networks:
+      edge: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 8080
+        published: "8185"
+        protocol: tcp
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
+  redis:
+    command:
+      - redis-server
+      - --appendonly
+      - 'yes'
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      timeout: 3s
+      interval: 5s
+      retries: 10
+      start_period: 5s
+    image: redis:8.6.4-alpine3.23
+    networks:
+      data: null
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - type: volume
+        source: redis_data
+        target: /data
+        volume: {}
+  worker:
+    cap_drop:
+      - ALL
+    depends_on:
+      database:
+        condition: service_healthy
+        required: true
+      redis:
+        condition: service_healthy
+        required: true
+    environment:
+      APP_ENV: production
+      POSTGRES_DB: app
+      POSTGRES_HOST: database
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: app
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - /app/healthcheck.py
+      timeout: 5s
+      interval: 10s
+      retries: 5
+      start_period: 10s
+    image: localhost:5000/labuser/final-worker:1.0.0
+    networks:
+      data: null
+    read_only: true
+    restart: unless-stopped
+    secrets:
+      - source: postgres_password
+        target: /run/secrets/postgres_password
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
+networks:
+  data:
+    name: final-broken-05_data
+  edge:
+    name: final-broken-05_edge
+  monitoring:
+    name: final-broken-05_monitoring
+volumes:
+  postgres_data:
+    name: final-broken-05_postgres_data
+  redis_data:
+    name: final-broken-05_redis_data
+secrets:
+  postgres_password:
+    name: final-broken-05_postgres_password
+    file: /home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt

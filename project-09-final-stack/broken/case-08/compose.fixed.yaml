@@ -1,0 +1,3 @@
+services:
+  backend:
+    image: localhost:5000/labuser/final-backend:1.0.0

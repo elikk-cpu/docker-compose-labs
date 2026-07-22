@@ -1,0 +1,15 @@
+The push refers to repository [localhost:5000/labuser/final-frontend]
+4cead16ac59a: Pushed
+115501ebef95: Pushed
+fd63c33c71ee: Pushed
+5728898b7b71: Pushed
+86ffcbfd30a5: Pushed
+832eb88036d6: Pushed
+1bf9957874ad: Pushed
+ac2d8fcab7e1: Pushed
+8f9abe9abe21: Pushed
+829a40cab9dd: Pushed
+33c8cdf1e4bc: Pushed
+55afa1ecc21d: Pushed
+f42b2e963e9e: Pushed
+1.0.0: digest: sha256:d84ec4082d45deed76addea2c472c3ed577ab98ca0908e07184110aea69b60a8 size: 856

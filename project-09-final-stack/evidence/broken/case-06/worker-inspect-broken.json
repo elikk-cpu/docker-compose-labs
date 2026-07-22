@@ -1,0 +1,316 @@
+[
+    {
+        "Id": "14f811abb01a6c879e4c4b9f9eb09d71bfffb136474ac0ab1bba7cea1ef4a82e",
+        "Created": "2026-07-22T19:07:23.28399811Z",
+        "Path": "python",
+        "Args": [
+            "worker.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 394456,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-07-22T19:07:29.179368114Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-07-22T19:10:32.657460043Z",
+                        "End": "2026-07-22T19:10:33.131982742Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:10:43.13367918Z",
+                        "End": "2026-07-22T19:10:43.619369092Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:10:53.619729583Z",
+                        "End": "2026-07-22T19:10:54.135362241Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:11:04.136397172Z",
+                        "End": "2026-07-22T19:11:04.595736782Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:11:14.597453114Z",
+                        "End": "2026-07-22T19:11:15.103391839Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:c1dddd042d0ff3cbf2ca3230b2b51f7d523710c0ddef9ade4fb68a05b88f1c1d",
+        "ResolvConfPath": "/var/lib/docker/containers/14f811abb01a6c879e4c4b9f9eb09d71bfffb136474ac0ab1bba7cea1ef4a82e/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/14f811abb01a6c879e4c4b9f9eb09d71bfffb136474ac0ab1bba7cea1ef4a82e/hostname",
+        "HostsPath": "/var/lib/docker/containers/14f811abb01a6c879e4c4b9f9eb09d71bfffb136474ac0ab1bba7cea1ef4a82e/hosts",
+        "LogPath": "/var/lib/docker/containers/14f811abb01a6c879e4c4b9f9eb09d71bfffb136474ac0ab1bba7cea1ef4a82e/14f811abb01a6c879e4c4b9f9eb09d71bfffb136474ac0ab1bba7cea1ef4a82e-json.log",
+        "Name": "/final-broken-06-worker-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/aa/docker-compose-labs/project-09-final-stack/worker/worker.py:/app/worker.py:ro",
+                "/home/aa/docker-compose-labs/project-09-final-stack/worker/healthcheck.py:/app/healthcheck.py:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "final-broken-06_data",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges:true"
+            ],
+            "Tmpfs": {
+                "/tmp": ""
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt",
+                    "Target": "/run/secrets/postgres_password",
+                    "ReadOnly": true,
+                    "BindOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/aa/docker-compose-labs/project-09-final-stack/worker/worker.py",
+                "Destination": "/app/worker.py",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/aa/docker-compose-labs/project-09-final-stack/worker/healthcheck.py",
+                "Destination": "/app/healthcheck.py",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt",
+                "Destination": "/run/secrets/postgres_password",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "14f811abb01a",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "POSTGRES_USER=app",
+                "POSTGRES_PORT=5432",
+                "REDIS_PORT=6379",
+                "APP_ENV=production",
+                "POSTGRES_HOST=database",
+                "POSTGRES_PASSWORD_FILE=/run/secrets/postgres_password",
+                "REDIS_HOST=redis",
+                "POSTGRES_DB=app",
+                "PATH=/opt/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.14",
+                "PYTHON_SHA256=639e43243c620a308f968213df9e00f2f8f62332f7adbaa7a7eeb9783057c690",
+                "VIRTUAL_ENV=/opt/venv",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1"
+            ],
+            "Cmd": [
+                "python",
+                "worker.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "/app/healthcheck.py"
+                ],
+                "Interval": 10000000000,
+                "Timeout": 5000000000,
+                "StartPeriod": 10000000000,
+                "Retries": 5
+            },
+            "Image": "localhost:5000/labuser/final-worker:1.0.0",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "2f50f8137459e49f8247868b1e025bb4c950f8fdedcb7b00b6f2d144b55f991a",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "database:service_healthy:false,redis:service_healthy:false",
+                "com.docker.compose.image": "sha256:c1dddd042d0ff3cbf2ca3230b2b51f7d523710c0ddef9ade4fb68a05b88f1c1d",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "final-broken-06",
+                "com.docker.compose.project.config_files": "/home/aa/docker-compose-labs/project-09-final-stack/compose.yaml,/home/aa/docker-compose-labs/project-09-final-stack/compose.prod.yaml,/home/aa/docker-compose-labs/project-09-final-stack/broken/case-06/compose.broken.yaml",
+                "com.docker.compose.project.working_dir": "/home/aa/docker-compose-labs/project-09-final-stack",
+                "com.docker.compose.service": "worker",
+                "com.docker.compose.version": "5.3.1"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "4429560e9617cf63c9065ffbfc5ad4d8012522b000b5e3fdb2b97e4bb4704ae4",
+            "SandboxKey": "/var/run/docker/netns/4429560e9617",
+            "Ports": {},
+            "Networks": {
+                "final-broken-06_data": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "final-broken-06-worker-1",
+                        "worker"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "1f6def0d77c93e030f8605035df00ba982232e9962a4217c897601e95b500c54",
+                    "EndpointID": "c5334c78d950491037df98f0666f2162ea0e210d3917bc2d8c8de8ebcc61bea4",
+                    "Gateway": "172.22.0.1",
+                    "IPAddress": "172.22.0.4",
+                    "MacAddress": "d6:c0:58:21:40:61",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "final-broken-06-worker-1",
+                        "worker",
+                        "14f811abb01a"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:9fde4427980aa1af047e5f31924436e62f056034df8c47e5420d917f5434aeb5",
+            "size": 1811,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

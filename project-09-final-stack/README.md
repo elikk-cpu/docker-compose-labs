@@ -48,3 +48,14 @@ Grafana -> Prometheus
 
 Самостоятельно проектировать, собирать, защищать, публиковать и диагностировать
 полноценное Docker/Compose-окружение уровня уверенного Junior DevOps.
+
+## Реализованный проект
+
+Итоговая документация:
+
+- [Runbook](RUNBOOK.md)
+- [Результат и acceptance](RESULT.md)
+- [Диагностика broken-сценариев](diagnosis/)
+
+Статус: завершён production-like Docker Compose stack с registry,
+monitoring, security hardening, persistence и troubleshooting evidence.

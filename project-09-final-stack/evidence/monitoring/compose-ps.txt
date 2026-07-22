@@ -1,0 +1,8 @@
+NAME                      IMAGE                                         COMMAND                  SERVICE      CREATED          STATUS                    PORTS
+final-prod-backend-1      localhost:5000/labuser/final-backend:1.0.0    "gunicorn --config g…"   backend      19 minutes ago   Up 19 minutes (healthy)   8000/tcp
+final-prod-database-1     postgres:17.10-alpine3.23                     "docker-entrypoint.s…"   database     19 minutes ago   Up 19 minutes (healthy)   5432/tcp
+final-prod-frontend-1     localhost:5000/labuser/final-frontend:1.0.0   "/docker-entrypoint.…"   frontend     19 minutes ago   Up 18 minutes (healthy)   80/tcp, 127.0.0.1:8080->8080/tcp
+final-prod-grafana-1      grafana/grafana:12.2.10-ubuntu                "/run.sh"                grafana      55 seconds ago   Up 53 seconds             127.0.0.1:3000->3000/tcp
+final-prod-prometheus-1   prom/prometheus:v3.4.0                        "/bin/prometheus --c…"   prometheus   55 seconds ago   Up 53 seconds             127.0.0.1:9090->9090/tcp
+final-prod-redis-1        redis:8.6.4-alpine3.23                        "docker-entrypoint.s…"   redis        19 minutes ago   Up 19 minutes (healthy)   6379/tcp
+final-prod-worker-1       localhost:5000/labuser/final-worker:1.0.0     "python worker.py"       worker       19 minutes ago   Up 19 minutes (healthy)   

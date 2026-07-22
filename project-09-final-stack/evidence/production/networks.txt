@@ -1,0 +1,17 @@
+=== frontend ===
+final-prod_edge
+
+=== backend ===
+final-prod_data
+final-prod_edge
+final-prod_monitoring
+
+=== worker ===
+final-prod_data
+
+=== database ===
+final-prod_data
+
+=== redis ===
+final-prod_data
+

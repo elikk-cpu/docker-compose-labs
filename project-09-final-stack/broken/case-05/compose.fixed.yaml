@@ -1,0 +1,4 @@
+services:
+  backend:
+    secrets:
+      - postgres_password

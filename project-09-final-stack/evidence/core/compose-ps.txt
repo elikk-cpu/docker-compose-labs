@@ -1,0 +1,6 @@
+NAME                                IMAGE                       COMMAND                  SERVICE    CREATED         STATUS                   PORTS
+project-09-final-stack-backend-1    final-backend:1.0.0         "flask --app app run…"   backend    4 minutes ago   Up 4 minutes (healthy)   8000/tcp
+project-09-final-stack-database-1   postgres:17.10-alpine3.23   "docker-entrypoint.s…"   database   4 minutes ago   Up 4 minutes (healthy)   127.0.0.1:5436->5432/tcp
+project-09-final-stack-frontend-1   final-frontend:1.0.0        "/docker-entrypoint.…"   frontend   4 minutes ago   Up 4 minutes (healthy)   80/tcp, 127.0.0.1:8080->8080/tcp
+project-09-final-stack-redis-1      redis:8.6.4-alpine3.23      "docker-entrypoint.s…"   redis      4 minutes ago   Up 4 minutes (healthy)   6379/tcp
+project-09-final-stack-worker-1     final-worker:1.0.0          "python worker.py"       worker     4 minutes ago   Up 4 minutes (healthy)   

@@ -1,0 +1,33 @@
+Docker Scout scan summary
+
+final-frontend: 4 vulnerabilities
+  CRITICAL: 0
+  HIGH: 0
+  MEDIUM: 0
+  LOW: 2
+  UNSPECIFIED: 2
+
+final-backend: 46 vulnerabilities
+  CRITICAL: 1
+  HIGH: 2
+  MEDIUM: 3
+  LOW: 33
+  UNSPECIFIED: 7
+
+final-worker: 45 vulnerabilities
+  CRITICAL: 1
+  HIGH: 2
+  MEDIUM: 3
+  LOW: 32
+  UNSPECIFIED: 7
+
+Triage:
+- Critical/High findings are reported in Perl packages inherited from
+  python:3.13.14-slim-bookworm.
+- Docker Scout reports no fixed package version for those findings.
+- Flask 3.1.2 has one LOW finding with fixed version 3.1.3.
+- Published tag 1.0.0 is not overwritten.
+- Next application release should update Flask, rebuild images, rescan,
+  publish a new version tag and review updated base images.
+- Existing mitigations: non-root, read-only filesystem, cap_drop=ALL,
+  no-new-privileges, isolated networks and limited published ports.

@@ -1,0 +1,4 @@
+services:
+  database:
+    volumes:
+      - ./broken/case-03/init:/docker-entrypoint-initdb.d:ro

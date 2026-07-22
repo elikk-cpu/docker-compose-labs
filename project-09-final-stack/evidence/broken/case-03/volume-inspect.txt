@@ -1,0 +1,16 @@
+[
+    {
+        "CreatedAt": "2026-07-22T17:26:34Z",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "ae75feb7eb53802412d757482c60972a68251df17565b105ee8793a4e553688d",
+            "com.docker.compose.project": "final-broken-03",
+            "com.docker.compose.version": "5.3.1",
+            "com.docker.compose.volume": "postgres_data"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/final-broken-03_postgres_data/_data",
+        "Name": "final-broken-03_postgres_data",
+        "Options": null,
+        "Scope": "local"
+    }
+]

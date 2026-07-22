@@ -1,0 +1,4 @@
+1.0.0: Pulling from labuser/final-backend
+Digest: sha256:cfb2c54bb2e98e5c9f636b6acfa6bd23770fa9c480ea3b995a7c5a277f91bf50
+Status: Image is up to date for localhost:5000/labuser/final-backend:1.0.0
+localhost:5000/labuser/final-backend:1.0.0

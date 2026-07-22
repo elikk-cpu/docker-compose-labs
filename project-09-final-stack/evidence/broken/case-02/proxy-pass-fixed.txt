@@ -1,0 +1,1 @@
+9:        proxy_pass http://backend:8000;

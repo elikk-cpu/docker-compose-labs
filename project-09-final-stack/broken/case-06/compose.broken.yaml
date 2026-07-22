@@ -1,0 +1,8 @@
+services:
+  backend:
+    volumes:
+      - /home/aa/docker-compose-labs/project-09-final-stack/backend/app.py:/app/app.py:ro
+
+  worker:
+    volumes:
+      - /home/aa/docker-compose-labs/project-09-final-stack/worker/worker.py:/app/worker.py:ro

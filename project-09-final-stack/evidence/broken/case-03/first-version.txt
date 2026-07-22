@@ -1,0 +1,5 @@
+   key   |     value     
+---------+---------------
+ release | first-version
+(1 row)
+

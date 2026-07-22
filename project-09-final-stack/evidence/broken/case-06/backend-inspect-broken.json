@@ -1,0 +1,385 @@
+[
+    {
+        "Id": "96083ea2c7a6cb83b3743774245da2d5df4e7490558493b95fe0de8241c1a907",
+        "Created": "2026-07-22T19:07:23.284058294Z",
+        "Path": "gunicorn",
+        "Args": [
+            "--config",
+            "gunicorn.conf.py",
+            "app:app"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 394458,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-07-22T19:07:29.180037622Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-07-22T19:10:53.780496636Z",
+                        "End": "2026-07-22T19:10:54.035853042Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:10:59.037811845Z",
+                        "End": "2026-07-22T19:10:59.292522781Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:11:04.294029183Z",
+                        "End": "2026-07-22T19:11:04.521871118Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:11:09.524189177Z",
+                        "End": "2026-07-22T19:11:09.747739368Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-07-22T19:11:14.748706944Z",
+                        "End": "2026-07-22T19:11:15.001673976Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:cfb2c54bb2e98e5c9f636b6acfa6bd23770fa9c480ea3b995a7c5a277f91bf50",
+        "ResolvConfPath": "/var/lib/docker/containers/96083ea2c7a6cb83b3743774245da2d5df4e7490558493b95fe0de8241c1a907/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/96083ea2c7a6cb83b3743774245da2d5df4e7490558493b95fe0de8241c1a907/hostname",
+        "HostsPath": "/var/lib/docker/containers/96083ea2c7a6cb83b3743774245da2d5df4e7490558493b95fe0de8241c1a907/hosts",
+        "LogPath": "/var/lib/docker/containers/96083ea2c7a6cb83b3743774245da2d5df4e7490558493b95fe0de8241c1a907/96083ea2c7a6cb83b3743774245da2d5df4e7490558493b95fe0de8241c1a907-json.log",
+        "Name": "/final-broken-06-backend-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/aa/docker-compose-labs/project-09-final-stack/backend/app.py:/app/app.py:ro",
+                "/home/aa/docker-compose-labs/project-09-final-stack/backend/gunicorn.conf.py:/app/gunicorn.conf.py:ro",
+                "/home/aa/docker-compose-labs/project-09-final-stack/config/app-config.yaml:/app/config/app-config.yaml:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "final-broken-06_data",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges:true"
+            ],
+            "Tmpfs": {
+                "/tmp": ""
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt",
+                    "Target": "/run/secrets/postgres_password",
+                    "ReadOnly": true,
+                    "BindOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/aa/docker-compose-labs/project-09-final-stack/config/app-config.yaml",
+                "Destination": "/app/config/app-config.yaml",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/aa/docker-compose-labs/project-09-final-stack/secrets/postgres_password.txt",
+                "Destination": "/run/secrets/postgres_password",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/aa/docker-compose-labs/project-09-final-stack/backend/app.py",
+                "Destination": "/app/app.py",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/aa/docker-compose-labs/project-09-final-stack/backend/gunicorn.conf.py",
+                "Destination": "/app/gunicorn.conf.py",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "96083ea2c7a6",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "APP_CONFIG_FILE=/app/config/app-config.yaml",
+                "POSTGRES_HOST=database",
+                "APP_ENV=production",
+                "POSTGRES_DB=app",
+                "REDIS_HOST=redis",
+                "POSTGRES_PORT=5432",
+                "POSTGRES_USER=app",
+                "POSTGRES_PASSWORD_FILE=/run/secrets/postgres_password",
+                "APP_VERSION=1.0.0",
+                "REDIS_PORT=6379",
+                "PATH=/opt/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.14",
+                "PYTHON_SHA256=639e43243c620a308f968213df9e00f2f8f62332f7adbaa7a7eeb9783057c690",
+                "VIRTUAL_ENV=/opt/venv",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1"
+            ],
+            "Cmd": [
+                "gunicorn",
+                "--config",
+                "gunicorn.conf.py",
+                "app:app"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/readyz', timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 10000000000,
+                "Retries": 10
+            },
+            "Image": "localhost:5000/labuser/final-backend:1.0.0",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "092a1c1c33239913cd8142bdb7e9c968c8a39aaeb1205f2c67bfeb3c5db848d9",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "database:service_healthy:false,redis:service_healthy:false",
+                "com.docker.compose.image": "sha256:cfb2c54bb2e98e5c9f636b6acfa6bd23770fa9c480ea3b995a7c5a277f91bf50",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "final-broken-06",
+                "com.docker.compose.project.config_files": "/home/aa/docker-compose-labs/project-09-final-stack/compose.yaml,/home/aa/docker-compose-labs/project-09-final-stack/compose.prod.yaml,/home/aa/docker-compose-labs/project-09-final-stack/broken/case-06/compose.broken.yaml",
+                "com.docker.compose.project.working_dir": "/home/aa/docker-compose-labs/project-09-final-stack",
+                "com.docker.compose.service": "backend",
+                "com.docker.compose.version": "5.3.1"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "eef24c9b11047aa84c8337bc83bd64b4a418d299955a0aa106ee5e09c23e561c",
+            "SandboxKey": "/var/run/docker/netns/eef24c9b1104",
+            "Ports": {
+                "8000/tcp": null
+            },
+            "Networks": {
+                "final-broken-06_data": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "final-broken-06-backend-1",
+                        "backend"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "1f6def0d77c93e030f8605035df00ba982232e9962a4217c897601e95b500c54",
+                    "EndpointID": "7221a9475ab752cfa5af39c2f368e8250e99a1284917d872176cd52b687d1fef",
+                    "Gateway": "172.22.0.1",
+                    "IPAddress": "172.22.0.5",
+                    "MacAddress": "86:3c:91:8c:05:45",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "final-broken-06-backend-1",
+                        "backend",
+                        "96083ea2c7a6"
+                    ]
+                },
+                "final-broken-06_edge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "final-broken-06-backend-1",
+                        "backend"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e8f2732b5e1db5b279e34424d8163ca0a1712953be7129b59e4558716f2535fc",
+                    "EndpointID": "949cdc9e0184bcb631ad2256c4173adee52157a5079bf8fd88249cdae7689a0a",
+                    "Gateway": "172.24.0.1",
+                    "IPAddress": "172.24.0.2",
+                    "MacAddress": "ce:e8:3e:14:e8:96",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "final-broken-06-backend-1",
+                        "backend",
+                        "96083ea2c7a6"
+                    ]
+                },
+                "final-broken-06_monitoring": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "final-broken-06-backend-1",
+                        "backend"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "af59fe0aa8a51936061ac5a74e3acdc72467cd169a90f2180d53b26bfa3d9783",
+                    "EndpointID": "c3c1976dba3fc31dac87a5d1c02132b30362337ec03b3b4ff39e82a59850ea0b",
+                    "Gateway": "172.23.0.1",
+                    "IPAddress": "172.23.0.2",
+                    "MacAddress": "fe:9a:5e:6a:a7:5a",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "final-broken-06-backend-1",
+                        "backend",
+                        "96083ea2c7a6"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:221cfee590c95f432bd167b4c4b24b6b9f9f5c9024b06160a9fbc0dc310dfab5",
+            "size": 1813,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

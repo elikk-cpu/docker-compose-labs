@@ -1,0 +1,45 @@
+1.0.0: Pulling from labuser/final-frontend
+fd63c33c71ee: Pulling fs layer
+832eb88036d6: Pulling fs layer
+829a40cab9dd: Pulling fs layer
+4cead16ac59a: Pulling fs layer
+829a40cab9dd: Already exists
+4cead16ac59a: Already exists
+115501ebef95: Download complete
+fd63c33c71ee: Already exists
+832eb88036d6: Already exists
+829a40cab9dd: Pull complete
+4cead16ac59a: Pull complete
+fd63c33c71ee: Pull complete
+832eb88036d6: Pull complete
+Digest: sha256:d84ec4082d45deed76addea2c472c3ed577ab98ca0908e07184110aea69b60a8
+Status: Downloaded newer image for localhost:5000/labuser/final-frontend:1.0.0
+localhost:5000/labuser/final-frontend:1.0.0
+1.0.0: Pulling from labuser/final-backend
+e1247a1b1412: Pulling fs layer
+0da2dd4c620a: Pulling fs layer
+7100406c946a: Pulling fs layer
+f1549886b38e: Pulling fs layer
+7100406c946a: Already exists
+f1549886b38e: Already exists
+0da2dd4c620a: Already exists
+745d1b0ad310: Download complete
+e1247a1b1412: Already exists
+7100406c946a: Pull complete
+f1549886b38e: Pull complete
+0da2dd4c620a: Pull complete
+e1247a1b1412: Pull complete
+Digest: sha256:cfb2c54bb2e98e5c9f636b6acfa6bd23770fa9c480ea3b995a7c5a277f91bf50
+Status: Downloaded newer image for localhost:5000/labuser/final-backend:1.0.0
+localhost:5000/labuser/final-backend:1.0.0
+1.0.0: Pulling from labuser/final-worker
+61d82506b6c3: Pulling fs layer
+f17cda3c2e50: Pulling fs layer
+0cbcbc5baa87: Download complete
+f17cda3c2e50: Already exists
+61d82506b6c3: Already exists
+f17cda3c2e50: Pull complete
+61d82506b6c3: Pull complete
+Digest: sha256:c1dddd042d0ff3cbf2ca3230b2b51f7d523710c0ddef9ade4fb68a05b88f1c1d
+Status: Downloaded newer image for localhost:5000/labuser/final-worker:1.0.0
+localhost:5000/labuser/final-worker:1.0.0

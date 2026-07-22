@@ -1,0 +1,14 @@
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.30.4
+Date: Wed, 22 Jul 2026 16:56:55 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.30.4</center>
+</body>
+</html>

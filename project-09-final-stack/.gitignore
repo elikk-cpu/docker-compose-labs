@@ -9,10 +9,4 @@
     .vscode/
     .DS_Store
     evidence/*.tmp
-    compose.yaml
-compose.override.yaml
-compose.prod.yaml
-frontend/Dockerfile
-backend/Dockerfile
-worker/Dockerfile
 secrets/*.txt

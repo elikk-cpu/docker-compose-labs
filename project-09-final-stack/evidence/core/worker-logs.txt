@@ -1,0 +1,2 @@
+worker-1  | worker waiting
+worker-1  | processed {'task': 'acceptance'}

@@ -1,0 +1,2 @@
+                "/home/aa/docker-compose-labs/project-09-final-stack/worker/worker.py:/app/worker.py:ro"
+                "Destination": "/app/worker.py",

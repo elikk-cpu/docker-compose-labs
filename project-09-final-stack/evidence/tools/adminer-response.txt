@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Host: 127.0.0.1:8089
+Date: Wed, 22 Jul 2026 16:34:19 GMT
+Connection: close
+X-Powered-By: PHP/8.4.12
+Set-Cookie: adminer_sid=8d0f0c8c972c44dd84732a7989e04ba8; path=/; HttpOnly
+Set-Cookie: adminer_key=2685a8364e4b475087676d2d95af28b1; path=/; HttpOnly; SameSite=lax
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache
+X-Frame-Options: deny
+X-XSS-Protection: 0
+X-Content-Type-Options: nosniff
+Referrer-Policy: origin-when-cross-origin
+Content-Security-Policy: script-src 'self' 'unsafe-inline' 'nonce-NTYxYjQxMDE5YWM0YWNjYzBkMjBmMjljNGRlYTFiYWY=' 'strict-dynamic'; connect-src 'self'; frame-src https://www.adminer.org; object-src 'none'; base-uri 'none'; form-action 'self'
+Vary: Accept-Encoding
+
