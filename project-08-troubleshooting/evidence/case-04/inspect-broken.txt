@@ -1,0 +1,1 @@
+user=10001 exit=1 status=exited

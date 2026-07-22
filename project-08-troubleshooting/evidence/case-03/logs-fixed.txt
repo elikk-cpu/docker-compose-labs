@@ -1,0 +1,4 @@
+api-1  | db-ready
+api-1  | db-ready
+api-1  | db-ready
+api-1  | db-ready

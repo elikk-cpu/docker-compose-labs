@@ -1,0 +1,5 @@
+   key   |     value      
+---------+----------------
+ welcome | second-version
+(1 row)
+

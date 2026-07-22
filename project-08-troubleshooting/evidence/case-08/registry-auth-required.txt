@@ -1,0 +1,8 @@
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+Docker-Distribution-Api-Version: registry/2.0
+Www-Authenticate: Basic realm="Registry Realm"
+Date: Wed, 22 Jul 2026 14:52:47 GMT
+Content-Length: 87
+
+{"errors":[{"code":"UNAUTHORIZED","message":"authentication required","detail":null}]}

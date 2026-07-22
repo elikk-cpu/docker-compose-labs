@@ -1,0 +1,2 @@
+NAME                             IMAGE                          COMMAND              SERVICE   CREATED         STATUS                     PORTS
+broken-04-permissions-writer-1   broken-04-permissions-writer   "python writer.py"   writer    3 seconds ago   Exited (1) 2 seconds ago   
